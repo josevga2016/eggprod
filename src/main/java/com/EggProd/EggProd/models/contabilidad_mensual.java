@@ -1,48 +1,39 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.EggProd.EggProd.models;
 
+import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import java.util.Date;
 
-/**
- *
- * @author Lenovo
- */
-@Table
-@Entity(name = "contabilidad_mensual")
-public class contabilidad_mensual implements Serializable{
+@Entity
+@Table(name = "contabilidad_mensual")
+public class contabilidad_mensual implements Serializable {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column (name="cod_contabilidad")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cod_contabilidad")
     private int cod_contabilidad;
-    @ManyToOne
-    @JoinColumn (name="cod_galpon")
+
+    @Column(name = "cod_galpon")
     private int cod_galpon;
-    @Column (name="nombre_numero_galpon")
+
+    @Column(name = "nombre_numero_galpon")
     private String nombre_numero_galpon;
-    @Column (name="fecha_inicio")
+
+    @Column(name = "fecha_inicio")
     private Date fecha_inicio;
-    @Column (name="fecha_fin")
+
+    @Column(name = "fecha_fin")
     private Date fecha_fin;
-    @Column (name="total_ventas")
+
+    @Column(name = "total_ventas")
     private double total_ventas;
-    @Column (name="total_costos")
+
+    @Column(name = "total_costos")
     private double total_costos;
-    @Column (name="ganacia_estimada")
+
+    @Column(name = "ganacia_estimada")
     private double ganacia_estimada;
-    @Column (name="observaciones")
+
+    @Column(name = "observaciones")
     private String observaciones;
 
     public contabilidad_mensual() {
@@ -131,7 +122,4 @@ public class contabilidad_mensual implements Serializable{
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-    
-    
-
 }

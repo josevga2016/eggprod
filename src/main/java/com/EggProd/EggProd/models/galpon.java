@@ -27,7 +27,7 @@ public class galpon implements Serializable{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column (name="cod_galpon")
     private int cod_galpon;
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn (name="usuario")
     private String usuario;
     @Column (name="nombre_numero")

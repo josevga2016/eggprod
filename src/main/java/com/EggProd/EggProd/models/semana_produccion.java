@@ -27,7 +27,7 @@ public class semana_produccion implements Serializable{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column (name="cod_semana")
     private int cod_semana;
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn (name="cod_galpon")
     private int cod_galpon;
     @Column (name="nombre_numero_galpon")

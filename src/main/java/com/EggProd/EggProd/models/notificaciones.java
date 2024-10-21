@@ -25,7 +25,7 @@ public class notificaciones implements Serializable{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column (name="cod_notificacion")
     private int cod_notificacion;
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn (name="cod_galpon")
     private int cod_galpon;
     @Column (name="nombre_numero_galpon")

@@ -26,7 +26,7 @@ public class indicadores implements Serializable{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column (name="cod_indicador")
     private int cod_indicador;
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn (name="cod_galpon")
     private int cod_galpon;
     @Column (name="nombre_numero_galpon")

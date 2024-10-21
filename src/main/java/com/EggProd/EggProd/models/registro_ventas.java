@@ -26,7 +26,7 @@ public class registro_ventas implements Serializable{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column (name="cod_venta")
     private int cod_venta;
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn (name="cod_galpon")
     private int cod_galpon;
     @Column (name="nombre_numero_galpon")
